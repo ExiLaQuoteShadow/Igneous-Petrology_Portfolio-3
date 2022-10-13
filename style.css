@@ -1,0 +1,450 @@
+*,*::before,*::after {
+	overflow-x: hidden;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Lato";
+	user-select: none;
+}
+
+@font-face {font-family: "Lato"; src: url("Lato.ttf")}
+@font-face {font-family: "Geograph"; src: url("Geograph.ttf")}
+@font-face {font-family: "DelightCoffee"; src: url("DelightCoffee.ttf")}
+@font-face {font-family: "Raleway"; src: url("RalewaySemiBold.ttf")}
+
+.textBox p::selection, .extraBG *::selection, .sourcesTXT::selection {background: #fff0b2;}
+.textBox *, .extraBG *, .sourcesTXT * {user-select: text;}
+*::-webkit-scrollbar {display: none;}
+html {scroll-behavior: smooth !important;}
+
+:root {
+  --gray: rgb(25, 25, 25);
+  --blue: rgb(168, 222, 234);
+	--beige: rgb(230, 206, 149);
+  --red: rgb(209, 68, 68);
+  --orange: rgb(235, 113, 61);
+	--darkblue: rgb(117, 189, 234);
+}
+
+body, #fakeBody, #header, .extraBG, #volcano, .magma {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body, #fakeBody {background-color: var(--blue); justify-content: space-around;}
+#fakeBody {width: 100vw; height: 100vh; position: absolute; top: 0vh; align-items: flex-start;}
+
+#header {
+	z-index: 10000;
+	position: absolute;
+	top: 0vh;
+	width: 100vw;
+	height: 9vh;
+	justify-content: space-around;
+	background-color: var(--gray);
+  border: 1vh solid var(--red);
+}
+
+#header p {
+	color: white;
+	text-align: center;
+	margin: 0vw 2vw 0vw 2vw;
+	font-size: 1.5vw;
+}
+
+#header p a, #header p i {
+	font-family: "Lato"; 
+	font-weight: 700; 
+	letter-spacing: 0.14vw;
+	color: white;
+}
+
+#volcano, #shell {
+	position: absolute;
+	top: 25vh;
+	align-items: flex-start;
+	background-color: var(--gray);
+	width: 100vw;
+	height: 200vh;
+	transition: background-color 1000ms ease-in-out, transform 2000ms;
+}
+
+#shell {z-index: 5;}
+
+.crater {
+	transform: translate(0vw, -3vw);
+	background-color: white;
+	opacity: 0.3;
+	z-index: 5;
+	position: absolute;
+	border-radius: 100%;
+	width: 30vw;
+	height: 7vw;
+	border-bottom: 1vw solid var(--gray);
+}
+
+.curvedL, .curvedR {
+	z-index: 6;
+	background-color: var(--blue);
+	width: 35vw;
+	height: 35vw;
+	border-radius: 0% 0% 0% 100%;
+	border-left: 1vw solid var(--gray);
+	border-bottom: 1vw solid var(--gray);
+}
+
+.curvedL {transform: translate(50vw, 0vh);}
+.curvedR {transform: translate(-50vw, 0vh) scale(-1, 1);}
+
+.shafts, #fakeM {
+	background-color: var(--orange);
+	position: absolute;
+	height: 0vh;
+	width: 4vw;
+	transition: height 1700ms ease-in-out, transform 1700ms ease-in-out;
+	border-left: 0.5vw solid var(--gray);
+	border-right: 0.5vw solid var(--gray);
+}
+
+#fakeM {
+	z-index: 149;
+	position: absolute;
+	bottom: 70vh;
+	height: 0vh;
+	display: none;
+	transition: height 2000ms, bottom 2000ms;
+}
+
+.shM {z-index: 9; bottom: 0vh; transform: translate(0vw, -100vh);}
+
+.shL {
+	z-index: 8;
+	transform: rotate(124deg) translate(0vw, 0vw); 
+	height: 0vw;
+	width: 2vw;
+}                                
+
+.shR {
+	z-index: 8;
+	transform: rotate(70deg) translate(0vw, 0vw); 
+	height: 0vw;
+	width: 2vw;
+}
+
+.magma {
+	z-index: 7;
+	background-color: var(--orange);
+	position: absolute;
+	bottom: 0vh;
+	width: 100vw;
+	height: 100vh;
+}
+
+#magmaArrow {
+	font-size: 10vh;
+	line-height: 5vh;
+	color: white;
+	font-weight: bold;
+}
+
+#volBtn {
+	z-index: 150;
+	position: absolute;
+	top: 12vh;
+	width: 5vw;
+	height: 5vw;
+	border-radius: 100%;
+	border: 1vw solid var(--red);
+	background-color: var(--gray);
+	transition: transform 2000ms, 
+		background-color 400ms ease-in-out, 
+		border 400ms ease-in-out,
+		height 1000ms ease-in-out,
+		width 1000ms ease-in-out;
+}
+
+#volBtn:hover {background-color: white; cursor: pointer;}
+
+#mainBG, #defBG, #exhBG, #benBG, .headBox, .textBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	position: absolute;
+	top: 0vh;
+	width: 100vw;
+	height: 100vh;
+	transition: transform 1000ms ease-in-out;
+}
+
+#mainBG {background-color: white; display: none;}
+
+/* First-Level Abstraction (Across BGs) */
+
+.headBox {
+	justify-content: flex-start;
+	align-items: flex-end;
+	overflow-y: hidden;
+}
+
+.headTXT {
+	font-size: 13vh;
+	margin: 13vh 10vw 0vh 10vw;
+	font-family: "Geograph";
+}
+
+.textFence, .textBox {
+	overflow-y: hidden;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.textBox p.textHead {
+	font-size: 8vh;
+	font-family: "DelightCoffee";
+	font-weight: 900;
+	letter-spacing: 0.4vw;
+}
+
+.textBox p, img {overflow-y: hidden;}
+.pics {background-color: var(--gray); border-radius: 2vw; overflow-y: hidden; z-index: 5000;}
+
+/* Second-Level Abstractions (Across Fences & Boxes) */
+
+.defFence {
+	width: 100vw;
+	height: 120vh;
+}
+
+.defBox {
+	background-color: white;
+	border: 0.8vw solid var(--gray);
+	padding: 5vh 2vw 4vh 2vw;
+	width: 80vw;
+	line-height: 6vh;
+}
+
+.defBox p {
+	color: var(--gray);
+	font-size: 1.4vw;
+	font-family: "Raleway";
+	margin: 1vh 0vw 1vh 0vw;
+}
+
+#defBG p.textHead {
+	color: var(--red);
+	line-height: 11vh;
+	text-align: center;
+}
+
+.exhFence {
+	width: 100vw;
+	height: 120vh;
+}
+
+.exhBox {
+	background-color: white;
+	border: 0.8vw solid var(--gray);
+	padding: 5vh 2vw 4vh 2vw;
+	width: 80vw;
+	line-height: 6vh;
+}
+
+.exhBox p {
+	color: var(--gray);
+	font-size: 1.4vw;
+	font-family: "Raleway";
+	margin: 1vh 0vw 1vh 0vw;
+}
+
+#exhBG p.textHead {
+	color: rgb(124, 21, 193);
+	line-height: 11vh;
+	text-align: center;
+}
+
+.benFence {
+	width: 100vw;
+	height: 120vh;
+}
+
+.benBox {
+	background-color: white;
+	border: 0.8vw solid var(--gray);
+	padding: 5vh 2vw 4vh 2vw;
+	width: 80vw;
+	line-height: 6vh;
+}
+
+.benBox p {
+	color: var(--gray);
+	font-size: 1.4vw;
+	font-family: "Raleway";
+	margin: 1vh 0vw 1vh 0vw;
+}
+
+#benBG p.textHead {
+	color: rgb(124, 21, 193);
+	line-height: 11vh;
+	text-align: center;
+}
+
+/* Third-Level Abstractions (Specific Components) */
+
+/* DEFINITE */
+
+#defBG {
+	background-color: var(--orange);
+	transform: translate(100vw, 0vh);
+	color: white;
+	height: 500vh;
+}
+
+.defF1 {transform: translate(0vw, 40vh);}
+.defB1 {height: 70vh; text-align: left;}
+.defF1 div.pics img {height: 55vh;}
+.defF1 div.pics {transform: translate(21vw, 45vh); border: 0.8vw solid var(--gray);}
+
+.defF2 {transform: translate(0vw, 60vh); height: 140vh;}
+.defB2 {height: 85vh; text-align: justify;}
+.defF2 div.pics img {height: 60vh;}
+.defF2 div.pics {transform: translate(0vw, 75vh); border: 0.8vw solid var(--gray);}
+
+.defF3 {transform: translate(0vw, 95vh); height: 100vh;}
+.defB3 {height: 65vh;}
+.defF3 div.pics img {height: 40vh;}
+.defF3 div.pics {transform: translate(0vw, 50vh); border: 0.8vw solid var(--gray);}
+
+#defBG .bgBtn {transform: translate(0vw, 255vh); border: 1vw solid var(--gray); background-color: var(--blue);}
+
+/* EXHIBIT */
+
+#exhBG {
+	background-color: var(--darkblue);
+	transform: translate(-100vw, 0vh);
+	color: white;
+	height: 500vh;
+} 
+
+.exhF1 {transform: translate(0vw, 100vh); height: 130vh;}
+.exhB1 {height: 90vh; text-align: left;}
+.exhF1 div.pics img {height: 55vh;}
+.exhF1 div.pics {transform: translate(18vw, 67vh); border: 0.8vw solid var(--gray);}
+
+.exhF2 {transform: translate(0vw, 120vh); height: 140vh;}
+.exhB2 {height: 75vh; text-align: center;}
+.exhF2 div.pics img {height: 60vh;}
+.exhF2 div.pics {transform: translate(0vw, 65vh); border: 0.8vw solid var(--gray);}
+
+.exhF3 {transform: translate(0vw, 135vh); height: 120vh;}
+.exhB3 {height: 80vh; text-align: center;}
+.exhF3 div.pics img {height: 50vh;}
+.exhF3 div.pics {transform: translate(0vw, 65vh); border: 0.8vw solid var(--gray);}
+
+.exhF4 {transform: translate(0vw, 160vh); height: 105vh;}
+.exhB4 {height: 65vh; text-align: left;}
+.exhF4 div.pics img {height: 55vh;}
+.exhF4 div.pics {transform: translate(22vw, 45vh); border: 0.8vw solid var(--gray);}
+
+#exhBG .bgBtn {transform: translate(-20vw, 390vh); border: 1vw solid var(--gray); background-color: var(--beige);}
+
+/* BENEFIT */
+
+#benBG {
+	background-color: var(--beige);
+	transform: translate(0vw, 100vh);
+	color: white;
+	height: 500vh;
+	display: none;
+}
+
+.benF1 {transform: translate(0vw, 20vh); height: 160vh;}
+.benB1 {height: 100vh; text-align: left;}
+.benF1 div.pics img {height: 65vh;}
+.benF1 div.pics {transform: translate(9vw, 85vh); border: 0.8vw solid var(--gray);}
+
+.benF2 {transform: translate(0vw, 55vh); height: 170vh;}
+.benB2 {height: 95vh; text-align: justify;}
+.benF2 div.pics img {height: 80vh;}
+.benF2 div.pics {transform: translate(12vw, 80vh); border: 0.8vw solid var(--gray);} 
+
+#benBG .bgBtn {width: 7vw; height: 7vw; transform: translate(-24vw, 180vh); border: 1.6vw solid var(--gray); background-color: var(--red);}
+
+.bgBtn {
+	position: absolute;
+	width: 5vw;
+	height: 5vw;
+	border-radius: 100%;
+	opacity: 0.5;
+	transition: opacity 400ms ease-in-out;
+}
+
+.bgBtn:hover {opacity: 1; cursor: pointer;}
+
+#quoteBG {
+	position: absolute;
+	top: 0vh;
+	width: 100vw;
+	height: 100vh;
+	transform: translate(0vw, -300vh);
+	transition: transform 1000ms ease-in-out;
+}
+
+#columnBox {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--red);
+}
+
+#quoteBG > div div {height: 100vh; width: 32vw;}
+#quoteBG > div div:nth-child(1){background-color: var(--darkblue);}
+#quoteBG > div div:nth-child(2){background-color: var(--beige);}
+#quoteBG > div div:nth-child(3){background-color: var(--orange);}
+
+#quoteBox {
+	width: 70vw;
+	height: 70vh;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	transform: translate(16vw, 25vh);
+	text-align: center;
+	overflow: hidden;
+}
+
+#quote, #end {font-size: 5vh; font-weight: 900; letter-spacing: 0.2vw;}
+
+.extraBG {
+	z-index: 97;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+  text-align: left;
+  border: 1vh dashed var(--red);
+  overflow-y: scroll;
+}
+
+.sourcesTXT {
+  position: absolute;
+  top: 0vh;
+  padding: 2vh 5vw 2vh 5vw;
+  font-family: "Lato", sans-serif;
+  color: var(--gray);
+  font-weight: 900;
+  font-size: 1.2vw; 
+  padding: 6vw 0vw 6vw 0vw;
+}
+
+.sourcesTXT span {
+  color: rgb(251, 115, 42);
+  font-family: "Geograph";
+  font-size: 2vw;
+}

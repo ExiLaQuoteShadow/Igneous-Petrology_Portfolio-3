@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio III - Andrew Tan</title>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="icon" type="image/x-icon" href="ip x-icon.jpg"></link>
+</head>
+<body>
+  <div id="header">
+    <p id="title"><i>THROUGH THE FIRE&nbsp;</i></p>
+    <p><a target="_blank" href="https://earthathome.org/vc/rocks/">Igneous Gallery</a></p>
+    <p><a target="_blank" href="sources.html">Citation</a></p>
+    <p><a target="_blank" href="https://github.com/ExiLaQuote/Igneous-Petrology_Portfolio-3">Source Code</a></p>
+  </div>
+
+  <div id="fakeBody">
+    <div id="shell"></div>
+    <div id="volcano">
+      <div class="crater"></div>
+      <div class="curvedL"></div>
+      <div class="curvedR"></div>
+      <div class="shafts shM"></div>
+      <div class="shafts shL"></div>
+      <div class="shafts shR"></div>
+      <div class="magma"><p id="magmaArrow"><br>^<br>^</p></div>
+    </div>
+    <div id="fakeM"></div>
+    <div id="volBtn" onclick="eruption()"></div>
+  </div>
+
+  <div id="mainBG">
+    <div id="defBG">
+      <div class="headBox">
+        <p class="headTXT" style="text-align:right;">IGNEOUS<br>PETROLOGY<br><br>[Definite]<br>↡&ensp;&emsp;</p>
+      </div>
+      <div class="defF1 defFence textFence">
+        <div class="defB1 defBox textBox">
+          <p class="textHead">WHAT IS "IGNEOUS PETROLOGY" ?&nbsp;</p>
+          <p>Igneous Petrology is the study of magmatic rocks. Deep underground between the lower crust and upper mantle, there is molten rock which cools or crystallizes because of intense heat. This forms igneous rocks.</p>
+          <p>The subject is rich with discussions on how we classify and group such rocks, why some crystallize while some don’t, and what these rocks are even used for! <br>This short journey is an intermediate overview of <br>basic knowledge drawn out in both breadth and depth. <br>Let us begin.</p>
+        </div>
+        <div class="pics"><img src="concept_map.jpg"></div>
+      </div>
+      <div class="defF2 defFence textFence">
+        <div class="defB2 defBox textBox">
+          <p class="textHead">TWO MAIN CATEGORIES</p>
+          <p>There are two broad distinctions: Extrusive (volcanic) and Intrusive (plutonic) rocks. When a volcano erupts, molten rock comes to the surface in the form of either lava or volcanic ash. Because of the relatively cooler temperature of the atmosphere, the lava cools quickly, leaving almost no time for minerals to grow. This entails that there are no large grains which leads to a glassy texture (obsidian), however microscopic crystals may form in aphanitic rocks (basalt, andesite).</p>
+          <p>Intrusive rocks cool slowly below the surface in the crust. In most cases, magma less dense than the surrounding rock will tend to creep up and break, melt rocks, or fill in existing cracks. A pluton is a body of plutonic rock, which is characterized and specified, such as dikes, stocks, laccoliths, sills, batholiths, and pipes.</p>
+        </div>
+        <div class="pics"><img src="intrusive_rocks.png"></div>
+      </div>
+      <div class="defF3 defFence textFence">
+        <div class="defB3 defBox textBox">
+          <p class="textHead">SOME COMMON MISCONCEPTIONS</p>
+          <p>Now, many people may not know much about rocks in general. But there might be many false things about igneous rocks that they think they do know. For instance, the notion that magma comes from the earth’s core is not true. It comes from the mantle and upper crust. It is also incorrect to say that rocks pre-exist in magma and are merely discharged from an erupting volcano. Lastly, not all igneous rocks are black or gray, and not all rocks of such a shade are igneous. It is crucial to keep these misconceptions in mind as we move forward in our exploration of igneous rocks.</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="bgBtn" onclick="classPro()"></div>
+    </div>
+    
+    <div id="exhBG">
+      <div class="headBox" style="align-items: flex-start">
+        <p class="headTXT" style="text-align:left;">CLASSIFICATION<br>& PROCESSES<br><br>[Exhibit]<br>&ensp;&emsp;↡</p>
+      </div>
+      <div class="exhF1 exhFence textFence">
+        <div class="exhB1 exhBox textBox">
+          <p class="textHead">PROPERTIES AND CATEGORIES</p>
+          <p>The chart attached below is one accurate way of classifying igneous rocks. It is in fact the basis for their names. Geologists look at the mineral composition (%) of each rock. Observing the graph, a rock may be represented by a vertical line;  for example, the (dashed) line between the mafic and ultramafic sections is approximately 30% olivine, 50% pyroxene, and 30% Ca-rich plagioclase feldspar.</p>
+          <p>In the lower half, you will notice that the pairs of intrusive and extrusive rocks respectively share the same mineral composition (for instance, granite and rhyolite). Yes, but they are given different names because they differ by location of formation and by grain size. Most volcanic rocks are aphanitic (small, fine grains) while most plutonic rocks are phaneritic (large, coarse grains).</p>
+        </div>
+        <div class="pics"><img src="classification.png"></div>
+      </div>
+      <div class="exhF2 exhFence textFence">
+        <div class="exhB2 exhBox textBox">
+          <p class="textHead">SO IGNEOUS ROCKS MAY ONLY HAVE ONE GRAIN SIZE ?&nbsp;</p>
+          <p>No, and this is what is fascinating about the rate of cooling! Some minerals will crystallize earlier than others, and if given more time, such crystals can grow quite a lot. So imagine that already large crystals are spewed out in lava. The lava then cools rapidly, but now the crystals are surrounded by the smaller ones recently cooled. Such a phenomenon produces rocks with a porphyritic texture. The larger crystals are phenocrysts, and the smaller ones are called groundmass. These are contained in a “porphyry.”</p>
+        </div>
+        <div class="pics"><img src="porphyry.png"></div>
+      </div>
+      <div class="exhF3 exhFence textFence">
+        <div class="exhB3 exhBox textBox">
+          <p class="textHead">HOW DO PLATE TECTONICS AFFECT IGNEOUS ROCKS ?&nbsp;</p>
+          <p>Plate Tectonics heavily affects the rock cycle, and specifically, the location of plate boundaries influence the characteristics of the igneous rocks formed there. At divergent boundaries, convection carries magma up and it cools into rock.</p>
+          <p>At convergent boundaries (subduction zones), sedimentary rocks are pushed into the mantle. When it melts and breaks, it will either be discharged by eruption (extrusive) or cools halfway within the bedrock (intrusive).</p>
+        </div>
+        <div class="pics"><img src="plate_tectonics.jpg"></div>
+      </div>
+      <div class="exhF4 exhFence textFence">
+        <div class="exhB4 exhBox textBox">
+          <p class="textHead">INTERACTIONS WITH SEDIMENTARY & METAMORPHIC ROCKS</p>
+          <p>As for the rock cycle, both sedimentary and metamorphic rocks may melt into magma with enough <br>heat and pressure. Conversely, igneous rocks may undergo contact, regional, or dynamic processes <br>and become metamorphic rock, or they could <br>be subjcted to weathering by natural <br>processes and become sediment.</p>
+        </div>
+        <div class="pics"><img src="igneous_cycle.png"></div>
+      </div>
+      <div class="bgBtn" onclick="myPrax()"></div>
+    </div>
+
+    <div id="benBG">
+      <div class="headBox" style="align-items: center">
+        <p class="headTXT" style="text-align: center">MYSTERY &<br>PRAXIS<br><br>[Benefit]<br>↡</p>
+      </div>
+      <div class="benF1 exhFence textFence">
+        <div class="benB1 exhBox textBox">
+          <p class="textHead">ARE THERE ANY QUESTIONS <br>YET UNANSWERED ?&nbsp;</p>
+          <p>There is a structure in Wyoming whose characteristics are uncommon and whose origin is not yet definite. It is a prominent obelisk that is deemed sacred by over twenty North American tribes. Notice the odd lines around it. Such a feature is called columnar jointing and in this case these columns are either pentagons or hexagons. It is mostly made of phonolite porphyry (a rare fine-grained igneous rock). </p>
+          <p>So far, current research agrees that Devil’s Tower formed from deep molten rock forced upwards. The debate is now where it cooled underground or surfaced. Currently, the most plausible is the Maar-Diatreme Theory, which suggests that magma once encountered groundwater, resulting in steam which exploded to create a crater on land. Then, the wide hole is filled with lava to form a dome structure. And the shape we see now was perfected through erosion.</p>
+        </div>
+        <div class="pics"><img src="devil_tower.png"></div>
+      </div>
+      <div class="benF2 exhFence textFence">
+        <div class="benB2 exhBox textBox">
+          <p class="textHead">WHERE CAN WE FIND IGNEOUS ROCKS IN THE MODERN WORLD ?&nbsp;</p>
+          <p>Igneous rocks can be found in everyday life. Because of its natural grained and or crystalline nature, it is durable and a preference for constructing homes. Granite is loved as countertops, columns, and bridges. Basalt is commonly used for flooring, cobblestone, and railroad track ballast. These two rocks are the most abundantly found within the earth’s crust.</p>
+          <p>There are also others, each with their special uses: pumice for household products, gabbro for cemetery markers, diorite for statues, and more glassy rocks like obsidian for jewelry. The monolithic structure below is the Kadokawa Culture Museum made of granite (intrusive and phaneritic, therefore with large grain sizes and visible crystals).</p>
+        </div>
+        <div class="pics"><img src="granite_structure.png"></div>
+      </div>
+      <div class="bgBtn" onclick="quoteBtn()"></div>
+    </div>
+    
+    <div id="quoteBG">
+      <div id="columnBox"><div></div><div></div><div></div></div>
+      <div id="quoteBox">
+        <p id="quote"></p><br><br>
+        <p id="end"></p> 
+      </div>
+    </div>
+
+  </div>
+  <script defer src="script.js"></script> 
+</body>
+</html>
